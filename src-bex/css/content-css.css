@@ -1,0 +1,180 @@
+#vs-app {
+  position: fixed !important;
+  left: 0px !important;
+  top: 0px !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1000000000 !important;
+  cursor: default !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.vs-selected-box {
+  box-shadow: rgb(125, 169, 255) 0px 0px 5px,
+    rgb(125, 169, 255) 0px 0px 5px inset !important;
+  background-color: rgba(125, 169, 255, 0.6) !important;
+  z-index: 1000000001 !important;
+  border-radius: 4px !important;
+  position: absolute !important;
+}
+
+.vs-help {
+  width: auto !important;
+  font-size: 11pt !important;
+  font-weight: normal !important;
+  line-height: 1.7em !important;
+  text-align: left !important;
+  color: white !important;
+  position: fixed !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  z-index: 1000000004 !important;
+  opacity: 1 !important;
+  cursor: default !important;
+  border-radius: 5px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: white !important;
+  border-image: initial !important;
+  padding: 5px !important;
+  transition: opacity 0.2s linear 0s !important;
+}
+
+.vs-refresh {
+  cursor: pointer !important;
+  color: white !important;
+  position: fixed !important;
+  top: 10px !important;
+  right: 10px !important;
+  z-index: 1000000004 !important;
+  padding: 5px !important;
+  border-radius: 5px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: white !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.vs-help-invisible {
+  opacity: 0 !important;
+}
+
+.vjs_video_3-dimensions {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/*app */
+.vs-app-main {
+  box-sizing: border-box;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.vs-container {
+  height: 100%;
+  width: 100%;
+  transition: padding 0.3s;
+}
+
+.vs-chat-drawer {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  background-color: #fff;
+}
+.vs-chat-frame {
+  width: 100%;
+  height: 100%;
+}
+
+.vs-mini-chat-iframe {
+  pointer-events: none;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.vs-iframe {
+  border: none;
+}
+
+.vs-spinner {
+  width: 60px;
+  height: 60px;
+  margin: 100px auto;
+  background-color: #333;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-animation: vs-scaleout 1s infinite ease-in-out;
+  animation: vs-scaleout 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes vs-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes vs-scaleout {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* video*/
+.vs-video-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.video-js .vjs-time-control,
+.video-js .vjs-current-time-control {
+  display: block !important;
+}
+
+.video-js .vjs-subtitles-button {
+  cursor: pointer;
+  flex: none;
+}
+
+.vjs_video_3-dimensions {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.vjs-syn-button:before {
+  content: "同步";
+}
+
+.video-js .vjs-syn-button {
+  cursor: pointer;
+  flex: none;
+}
